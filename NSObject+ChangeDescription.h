@@ -1,5 +1,5 @@
 //
-//  NSObject+load.h
+//  NSObject+ChangeDescription.h
 //  yimei
 //
 //  Created by YJD on 2017/6/19.
@@ -8,9 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSObject (load)
+@interface NSObject (ChangeDescription)
 
-//打开或关闭方法 断点后 lldb  po [NSObject changeDescription]
 +(void)exchangeImplementations;
 
 @end

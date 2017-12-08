@@ -1,23 +1,21 @@
 //
-//  NSObject+load.m
+//  NSObject+ChangeDescription.m
 //  yimei
 //
 //  Created by YJD on 2017/6/19.
 //  Copyright © 2017年 yixin. All rights reserved.
 //
 
-#import "NSObject+load.h"
+#import "NSObject+ChangeDescription.h"
 #import <objc/runtime.h>
 
-@implementation NSObject (load)
+@implementation NSObject (ChangeDescription)
 
 +(void)load{
-#ifdef DEBUG
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         [self exchangeImplementations];
     });
-#endif
 }
 
 +(void)exchangeImplementations{
